@@ -37,8 +37,7 @@ URL path + /check/namme content/password content/id_event content/
 4- for deleting the userDb collection in the database you must have to go
 to the url path + /delete , THIS IS A GET METHOD
 
-5- for Reading the csv you need to send the csv file through postman or insonmia
-and it is received with a POST METHOD.
+5- To read the csv, you need to send the csv file via postman or insomnia and it is received with a POST METHOD, you need to go to URL path + /csvFile.
 
 
 
