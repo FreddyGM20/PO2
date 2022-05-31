@@ -18,10 +18,12 @@ to the url path + /connect , THIS IS A GET METHOD
 to the url path + /create , THIS IS A POST METHOD
 which received a .JSON that has the info of the new user
 
-3- for deleting the userDb collection in the database you must have to go
+3- to authenticate user, you need to go to URL path + /check/, THIS IS A GET METHOD that received a .JSON that authenticates
+
+4- for deleting the userDb collection in the database you must have to go
 to the url path + /delete , THIS IS A GET METHOD
 
-4- for Reading the csv you need to send the csv file through postman or insonmia
+5- for Reading the csv you need to send the csv file through postman or insonmia
 and it is received with a POST METHOD.
 
 
