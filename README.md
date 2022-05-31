@@ -1,8 +1,8 @@
-1) Cargar GitHub en Docker:
+1) Upload GitHub to Docker:
 git clone https://github.com/FreddyGM20/PO2
-2) Dirigirse a la carpeta de trabajo:
+2) Go to the working folder:
 cd PO2
-3) Cargar la imagen de docker
+3) Upload the docker image:
 docker-compose build 
 docker-compose up -d
 
