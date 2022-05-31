@@ -32,7 +32,6 @@ where it should have the following structure:
 
 ```
 URL path + /check/namme content/password content/id_event content/
-
 ```
 
 4- for deleting the userDb collection in the database you must have to go
