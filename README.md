@@ -3,8 +3,8 @@ git clone https://github.com/FreddyGM20/PO2
 2) Go to the working folder:
 cd PO2
 3) Upload the docker image:
-docker-compose build 
-docker-compose up -d
+`docker-compose build` 
+`docker-compose up -d`
 
 open de port given in the website, the ones which said 8080,
 then copy the url.
