@@ -1,7 +1,7 @@
 1) Upload GitHub to Docker:
-git clone https://github.com/FreddyGM20/PO2
+`git clone https://github.com/FreddyGM20/PO2`
 2) Go to the working folder:
-cd PO2
+`cd PO2`
 3) Upload the docker image:
 `docker-compose build` 
 `docker-compose up -d`
