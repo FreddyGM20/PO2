@@ -16,9 +16,24 @@ to the url path + /connect , THIS IS A GET METHOD
 
 2- for create an user you must have to go to 
 to the url path + /create , THIS IS A POST METHOD
-which received a .JSON that has the info of the new user
+which received a .JSON that has the info of the new user.
+The JSON must have the following structure:
 
-3- to authenticate user, you need to go to URL path + /check/, THIS IS A GET METHOD that received a .JSON that authenticates
+```
+{
+  "name": "xxxx",
+  "password": "xxxx",
+  "id_event": "xxxx"
+}
+```
+
+3- to authenticate user, you need to go to URL path + /check/, THIS IS A GET METHOD that received a .JSON that authenticates.
+where it should have the following structure:
+
+```
+URL path + /check/namme content/password content/id_event content/
+
+```
 
 4- for deleting the userDb collection in the database you must have to go
 to the url path + /delete , THIS IS A GET METHOD
