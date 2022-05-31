@@ -2,7 +2,7 @@ const express = require('express');
 const upload = require("express-fileupload");
 const app = express();
 const csv = require("csvtojson");
-let esquema;
+let Esquema = null;
 
 
 
@@ -19,7 +19,7 @@ app.get("/connect",(req,res)=>{
     return res.send("OK");
 });
 app.post("/create",async(req,res)=>{
-    if(Esquema){
+    if(Esquema!=null){
         const {name,password,id_event} = req.body;
         console.log(req.body);
         const user = await Esquema.findOne({name,password,id_event});
@@ -33,7 +33,7 @@ app.post("/create",async(req,res)=>{
 });
 
 app.post("/csvFile",async(req,res)=>{
-    if(Esquema){
+    if(Esquema!=null){
         const {userList} = req.files;
         console.log(userList);
         const arreglo=await csv().fromFile(userList.tempFilePath);
@@ -51,7 +51,7 @@ app.post("/csvFile",async(req,res)=>{
 });
 
 app.get("/delete",async(req,res)=>{
-    if(Esquema){
+    if(Esquema!=null){
         await Esquema.remove();
         res.send("OK");
     }else{
@@ -61,12 +61,18 @@ app.get("/delete",async(req,res)=>{
 })
 
 app.get('/check/:name/:password/:id_event',async(req,res)=>{
-    const usuario = await Usuario.findOne(req.params);
-    if(usuario){
-        res.send(`id:\t${usuario._id}`);
+    
+    if(Esquema!=null){
+        const usuario = await Esquema.findOne(req.params);
+        if(usuario){
+            console.log(usuario);
+            res.send(`id:\t${usuario._id}`);
+        }else{
+            res.send("NOK");
+        }
 
     }else{
-        res.send("NOK");
+        res.send("Ejecute la ruta + /connect");
     }
 })
 
